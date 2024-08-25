@@ -1,0 +1,15 @@
+@for (menu of menuList; track menu?.path) {
+<a
+  [routerLink]="menu?.path"
+  routerLinkActive="bg-gray-800"
+  class="flex justify-center items-center hover:bg-gray-800 rounded-md p-2 transition-colors"
+>
+  <i class="{{ menu?.data?.icon }} text-xl mr-4 text-indigo-400"></i>
+  <div class="flex flex-col flex-grow">
+    <span class="text-white text-lg font-semibold">{{
+      menu?.data?.title
+    }}</span>
+    <span class="text-gray-400 text-sm">{{ menu?.data?.description }}</span>
+  </div>
+</a>
+}

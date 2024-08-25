@@ -29,7 +29,9 @@ export const routes: Routes = [
       {
         path: 'pros-cons-stream',
         loadComponent: () =>
-          import('./home/pages/pros-cons-page/pros-cons-page.component'),
+          import(
+            './home/pages/pros-cons-stream-page/pros-cons-stream-page.component'
+          ),
         data: {
           icon: 'fa-solid fa-water',
           title: 'Como stream',
