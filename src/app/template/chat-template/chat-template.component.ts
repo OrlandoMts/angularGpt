@@ -13,14 +13,14 @@ import { MessageEventItf, MessageItf, OptionItf } from '@interfaces/*';
 import { OpenAiSrv } from 'app/home/services';
 
 @Component({
-  selector: 'app-orthography-page',
+  selector: 'app-chat-template',
   standalone: true,
   imports: [MessageComponent, TypingLoaderComponent, TxtMessageBoxComponent],
-  templateUrl: './orthography-page.component.html',
+  templateUrl: './chat-template.component.html',
   styles: ``,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export default class OrthographyPageComponent {
+export class ChatTemplateComponent {
   public openaiSrv = inject(OpenAiSrv);
   public messages = signal<Array<MessageItf>>([
     { text: 'Hi am omontes', isGpt: false },

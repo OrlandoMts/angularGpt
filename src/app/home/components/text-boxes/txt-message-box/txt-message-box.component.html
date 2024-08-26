@@ -3,8 +3,23 @@
   (ngSubmit)="handleSubmit()"
   class="flex flex-row items-center h-16 rounded-xl bg-white w-full px-4"
 >
+  <div class="mr-3">
+    <button
+      (click)="fileInput.click()"
+      type="button"
+      class="flex items-center justify-center text-gray-400"
+    >
+      <i class="fa-solid fa-paperclip text-xl"></i>
+    </button>
+    <input
+      type="file"
+      #fileInput
+      hidden
+      (change)="handleSelectedFile($event)"
+    />
+  </div>
   <div class="flex-grow">
-    <div class="relative w-full">
+    <div class="flex">
       <input
         type="text"
         autofocus
@@ -16,6 +31,16 @@
       />
     </div>
   </div>
+
+  <select
+    class="w-2/5 ml-5 border rounded-xl text-gray-800 focus:outline-none focus:border-indigo-300 pl-4 h-10"
+    formControlName="selectedOption"
+  >
+    <option value="">Seleccione</option>
+    @for (opt of options; track opt.id) {
+    <option [value]="opt.id">{{ opt.text }}</option>
+    }
+  </select>
 
   <div class="ml-4">
     <button class="btn-primary" type="submit" [disabled]="this.form.invalid">
