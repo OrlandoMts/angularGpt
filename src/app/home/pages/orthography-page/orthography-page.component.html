@@ -4,7 +4,9 @@
       <!-- Chat messages -->
       <app-message [text]="'Tests'" [isCurrentUser]="true" />
       <app-message [text]="'Holaa'" [isCurrentUser]="false" />
+      <app-typing-loader />
     </div>
   </div>
   <!-- MessageBox -->
+  <app-txt-message-box (onMessage)="handleMessage($event)" />
 </div>

@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
-import { SidebarMenuItemComponent } from '@components/';
+import { SidebarMenuItemComponent } from '@components/index';
 import { routes } from '../../../app.routes';
 
 @Component({
