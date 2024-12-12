@@ -1,3 +1,5 @@
+import { OrthographyItf } from './orthography.itf';
+
 export interface MessageEventItf {
   prompt: string;
   file?: File | null;
@@ -12,4 +14,5 @@ export interface OptionItf {
 export interface MessageItf {
   text: string;
   isGpt: boolean;
+  info?: OrthographyItf;
 }
