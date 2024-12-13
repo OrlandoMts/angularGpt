@@ -3,7 +3,6 @@
     <div class="grid gap-y-2">
       <!-- Chat messages -->
       @for (msg of messages(); track $index) {
-      <!-- <app-message [text]="msg.text" [isCurrentUser]="msg.isGpt" /> -->
       <app-message-orthography
         [isGpt]="msg.isGpt"
         [useScore]="msg.info?.userScore || 0"
@@ -16,8 +15,5 @@
     </div>
   </div>
   <!-- MessageBox -->
-  <app-txt-message-box
-    [options]="options"
-    (onMessage)="handleMessage($event)"
-  />
+  <app-txt-message-box (onMessage)="handleMessage($event)" />
 </div>

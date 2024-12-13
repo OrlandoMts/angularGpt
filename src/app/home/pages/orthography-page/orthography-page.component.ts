@@ -5,7 +5,6 @@ import {
   inject,
   signal,
 } from '@angular/core';
-import { Subject } from 'rxjs';
 
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import {
@@ -39,7 +38,6 @@ import { OpenAiSrv } from 'app/home/services';
 export default class OrthographyPageComponent {
   private _destroyRef = inject(DestroyRef);
   private _openaiSrv = inject(OpenAiSrv);
-  private _onDestroy$ = new Subject<void>();
   public isLoading = signal<boolean>(false);
   public messages = signal<Array<MessageItf>>([
     {

@@ -23,7 +23,7 @@ import { debounceTime, Subject, takeUntil } from 'rxjs';
 export class TxtMessageBoxComponent implements OnInit {
   @Input() placeholder: string = 'Escribir...';
   @Input() disableCorrections: boolean = false;
-  @Input({ required: true }) options!: Array<OptionItf>;
+  @Input() options: Array<OptionItf> = [];
   @Output() onMessage = new EventEmitter<MessageEventItf>();
   private _onDestroy$ = new Subject<void>();
   public debouEmit = new Subject<MessageEventItf>();
@@ -32,7 +32,7 @@ export class TxtMessageBoxComponent implements OnInit {
   public form = this._fb.group({
     prompt: ['', Validators.required],
     file: [null as File | null],
-    selectedOption: ['', Validators.required],
+    selectedOption: [''],
   });
   public file: File | undefined;
 
