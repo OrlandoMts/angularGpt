@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { Route, RouterLink } from '@angular/router';
 
-import { MenuItf } from '@interfaces/';
+import { MenuItf } from '@interfaces/index';
 
 @Component({
   selector: 'app-sidebar-menu-item',

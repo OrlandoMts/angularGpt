@@ -1,11 +1,17 @@
 import { Injectable } from '@angular/core';
 import { from, Observable } from 'rxjs';
 
-import { HttpResponseItf, OrthographyItf, ProsConsItf } from '@interfaces/*';
+import {
+  HttpResponseItf,
+  OrthographyItf,
+  ProsConsItf,
+  VoiceEnum,
+} from '@interfaces/index';
 import {
   orthographyUC,
   prosConsDiscusserUC,
   prosConsStreamUC,
+  textToAudioUC,
   translateUC,
 } from 'app/core';
 import { LanguageEnum, TranslateItf } from '../../interfaces/translate.itf';
@@ -33,5 +39,9 @@ export class OpenAiSrv {
     lang: LanguageEnum
   ): Observable<HttpResponseItf<TranslateItf> | null> {
     return from(translateUC(prompt, lang));
+  }
+
+  public textToAudio(prompt: string, voice: VoiceEnum) {
+    return from(textToAudioUC(prompt, voice));
   }
 }

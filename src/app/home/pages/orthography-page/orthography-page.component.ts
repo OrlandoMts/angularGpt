@@ -19,7 +19,7 @@ import {
   MessageItf,
   OptionItf,
   OrthographyItf,
-} from '@interfaces/*';
+} from '@interfaces/index';
 import { OpenAiSrv } from 'app/home/services';
 
 @Component({

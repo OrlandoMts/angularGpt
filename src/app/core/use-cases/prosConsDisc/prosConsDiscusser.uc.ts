@@ -1,4 +1,4 @@
-import { HttpResponseItf, ProsConsItf } from '@interfaces/*';
+import { HttpResponseItf, ProsConsItf } from '@interfaces/index';
 import {
   ERR_PROS_CONS_DISC_MSG,
   ERR_REQUEST_MSG,

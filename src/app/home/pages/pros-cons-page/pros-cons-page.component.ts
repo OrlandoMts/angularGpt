@@ -16,7 +16,7 @@ import {
   MessageEventItf,
   MessageItf,
   ProsConsItf,
-} from '@interfaces/*';
+} from '@interfaces/index';
 import { OpenAiSrv } from 'app/home/services';
 
 @Component({

@@ -1,4 +1,4 @@
-import { HttpResponseItf, OrthographyItf } from '@interfaces/*';
+import { HttpResponseItf, OrthographyItf } from '@interfaces/index';
 import { ERR_ORTHOGRAPHY_MSG, ERR_REQUEST_MSG } from 'app/messages/label.msg';
 import { environment } from 'environments/environment.development';
 

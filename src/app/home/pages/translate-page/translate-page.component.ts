@@ -18,7 +18,7 @@ import {
   MessageEventItf,
   MessageItf,
   OptionItf,
-} from '@interfaces/*';
+} from '@interfaces/index';
 import { OpenAiSrv } from 'app/home/services';
 import { LanguageEnum, TranslateItf } from '../../../interfaces/translate.itf';
 

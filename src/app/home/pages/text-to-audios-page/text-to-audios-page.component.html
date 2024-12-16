@@ -1,1 +1,21 @@
-<p>text-to-audios-page works!</p>
+<div class="chat-container">
+  <div class="chat-messages">
+    <div class="grid gap-y-2">
+      <!-- Chat messages -->
+      @for (msg of messages(); track $index) {
+      <app-message
+        [text]="msg.text"
+        [isGpt]="msg.isGpt"
+        [audioUrl]="msg.audioUrl"
+      />
+      } @if(isLoading()) {
+      <app-typing-loader />
+      }
+    </div>
+  </div>
+  <!-- MessageBox -->
+  <app-txt-message-box
+    [options]="options"
+    (onMessage)="handleMessage($event)"
+  />
+</div>

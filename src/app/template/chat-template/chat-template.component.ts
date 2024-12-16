@@ -9,7 +9,7 @@ import {
   TxtMessageBoxComponent,
   TypingLoaderComponent,
 } from '@components/index';
-import { MessageEventItf, MessageItf, OptionItf } from '@interfaces/*';
+import { MessageEventItf, MessageItf, OptionItf } from '@interfaces/index';
 import { OpenAiSrv } from 'app/home/services';
 
 @Component({

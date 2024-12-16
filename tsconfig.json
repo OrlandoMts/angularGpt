@@ -5,7 +5,7 @@
   "compilerOptions": {
     "baseUrl": "./src",
     "paths": {
-      "@interfaces/*": ["app/interfaces/index.ts"],
+      "@interfaces/*": ["app/interfaces/*"],
       "@components/*": ["app/home/components/*"],
       "@use-case/*": ["app/core/use-cases/*"]
     },
@@ -24,10 +24,7 @@
     "importHelpers": true,
     "target": "ES2022",
     "module": "ES2022",
-    "lib": [
-      "ES2022",
-      "dom"
-    ],
+    "lib": ["ES2022", "dom"]
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

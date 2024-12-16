@@ -12,4 +12,5 @@ import { MarkdownModule } from 'ngx-markdown';
 export class MessageComponent {
   @Input({ required: true }) text!: string;
   @Input({ required: true }) isGpt!: boolean;
+  @Input() audioUrl?: string;
 }

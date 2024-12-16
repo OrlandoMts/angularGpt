@@ -9,7 +9,7 @@ import {
   Output,
 } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
-import { MessageEventItf, OptionItf } from '@interfaces/*';
+import { MessageEventItf, OptionItf } from '@interfaces/index';
 import { debounceTime, Subject, takeUntil } from 'rxjs';
 
 @Component({
