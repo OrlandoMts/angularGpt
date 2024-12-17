@@ -3,4 +3,6 @@ export const ERR_TEXT_TO_AUDIO_MSG: string =
   'No se pudo realizar la generación de audio.';
 export const ERR_PROS_CONS_DISC_MSG: string =
   'No se pudo realizar la comparación.';
+export const ERR_REQUEST_ABSENCE_MSG: string =
+  'No se pudo realizar la consulta.';
 export const ERR_REQUEST_MSG: string = 'Error al procesar la solicitud.';

@@ -8,6 +8,7 @@ import {
   VoiceEnum,
 } from '@interfaces/index';
 import {
+  absenceUC,
   orthographyUC,
   prosConsDiscusserUC,
   prosConsStreamUC,
@@ -39,6 +40,10 @@ export class OpenAiSrv {
     lang: LanguageEnum
   ): Observable<HttpResponseItf<TranslateItf> | null> {
     return from(translateUC(prompt, lang));
+  }
+
+  public requestAbsence(prompt: string, abortSignal: AbortSignal) {
+    return absenceUC(prompt, abortSignal);
   }
 
   public textToAudio(prompt: string, voice: VoiceEnum) {

@@ -49,6 +49,16 @@ export const routes: Routes = [
         },
       },
       {
+        path: 'absence',
+        loadComponent: () =>
+          import('./home/pages/absence-page/absence-page.component'),
+        data: {
+          icon: 'fa-solid fa-umbrella-beach',
+          title: 'Ausencias',
+          description: 'Dudas sobre vacaciones',
+        },
+      },
+      {
         path: 'text-to-audio',
         loadComponent: () =>
           import(

@@ -1,3 +1,4 @@
+export * from './absence-page/absence-page.component';
 export * from './assistant-page/assistant-page.component';
 export * from './audio-to-text-page/audio-to-text-page.component';
 export * from './img-generation-page/img-generation-page.component';
