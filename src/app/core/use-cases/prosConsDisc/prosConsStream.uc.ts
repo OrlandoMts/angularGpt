@@ -1,5 +1,5 @@
 import { ERR_PROS_CONS_DISC_MSG } from 'app/messages/label.msg';
-import { environment } from 'environments/environment.development';
+import { environment } from 'environments/environment';
 
 export async function* prosConsStreamUC(
   prompt: string,
@@ -7,7 +7,7 @@ export async function* prosConsStreamUC(
 ) {
   try {
     const response = await fetch(
-      `${environment.api_backend}/pros-cons-discusser-stream`,
+      `${environment.url_api}/chat/pros-cons-discusser-stream`,
       {
         method: 'POST',
         headers: {

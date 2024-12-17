@@ -1,9 +1,9 @@
 import { ERR_REQUEST_ABSENCE_MSG } from 'app/messages/label.msg';
-import { environment } from 'environments/environment.development';
+import { environment } from 'environments/environment';
 
 export async function* absenceUC(prompt: string, abortSignal: AbortSignal) {
   try {
-    const response = await fetch(`${environment.api_backend}/absence`, {
+    const response = await fetch(`${environment.url_api}/chat/absence`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

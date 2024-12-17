@@ -1,13 +1,13 @@
 import { HttpResponseItf, TranslateItf } from '@interfaces/index';
 import { ERR_ORTHOGRAPHY_MSG } from 'app/messages/label.msg';
-import { environment } from 'environments/environment.development';
+import { environment } from 'environments/environment';
 
 export const translateUC = async (
   prompt: string,
   lang: string
 ): Promise<HttpResponseItf<TranslateItf> | null> => {
   try {
-    const response = await fetch(`${environment.api_backend}/translate`, {
+    const response = await fetch(`${environment.url_api}/chat/translate`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

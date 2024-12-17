@@ -3,14 +3,14 @@ import {
   ERR_PROS_CONS_DISC_MSG,
   ERR_REQUEST_MSG,
 } from 'app/messages/label.msg';
-import { environment } from 'environments/environment.development';
+import { environment } from 'environments/environment';
 
 export const prosConsDiscusserUC = async (
   prompt: string
 ): Promise<HttpResponseItf<ProsConsItf>> => {
   try {
     const response = await fetch(
-      `${environment.api_backend}/pros-cons-discusser`,
+      `${environment.url_api}/chat/pros-cons-discusser`,
       {
         method: 'POST',
         headers: {

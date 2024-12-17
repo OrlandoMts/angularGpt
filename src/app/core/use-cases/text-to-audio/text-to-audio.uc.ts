@@ -1,13 +1,13 @@
 import { TextToAudioItf } from '@interfaces/textToAudio.itf';
 import { ERR_TEXT_TO_AUDIO_MSG } from 'app/messages/label.msg';
-import { environment } from 'environments/environment.development';
+import { environment } from 'environments/environment';
 
 export const textToAudioUC = async (
   prompt: string,
   voice: string
 ): Promise<TextToAudioItf> => {
   try {
-    const response = await fetch(`${environment.api_backend}/text-to-audio`, {
+    const response = await fetch(`${environment.url_api}/chat/text-to-audio`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

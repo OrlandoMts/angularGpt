@@ -1,13 +1,13 @@
 import { HttpResponseItf, OrthographyItf } from '@interfaces/index';
 import { ERR_ORTHOGRAPHY_MSG, ERR_REQUEST_MSG } from 'app/messages/label.msg';
-import { environment } from 'environments/environment.development';
+import { environment } from 'environments/environment';
 
 export const orthographyUC = async (
   prompt: string
 ): Promise<HttpResponseItf<OrthographyItf>> => {
   try {
     const response = await fetch(
-      `${environment.api_backend}/orthography-check`,
+      `${environment.url_api}/chat/orthography-check`,
       {
         method: 'POST',
         headers: {
